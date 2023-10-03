@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Fruktur&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Fruktur&family=Open+Sans:wght@300&family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/acacia.webp);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    overflow: hidden;
+}
+
+.nice {
+    background-image: linear-gradient(to right, #a89441, #b6a560, #a89441);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+
+}
+
+.clockgame {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, #adadad, #adadadd8, #adadadaf);
+}
+
+/* SENHA DO RELOGIO */
+.codeclock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+}
+
+.inp-codetext {
+    border: none;
+    font-size: 40px;
+    color: #888888;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    width: 200px;
+    height: 60px;
+    margin: 50px;
+}
+
+.textres {
+    margin-top: 5px;
+    width: 100%;
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 80px;
+    font-variant: initial;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.txtres-code {
+    font-size: 40px;
+}
+
+.textcode {
+    display: flex;
+    flex-direction: column;
+}
+
+.imp1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* EXCLUIR */
+.btn-excluir {
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 2s all ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #c7c7c700;
+    background-color: #cfcbcb00;
+    background-image: url(../img/refresh.png);
+
+}
+
+.btn-excluir:hover {
+    border: 2px #fff solid;
+    background-image: url(../img/refresh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    transition: 2s all ease;
+}
+
+/* RELOGIO */
+main {
+    margin: 10px;
+    min-width: 40%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    min-width: 500px;
+    min-height: 500px;
+    background-color: #F1F1F0;
+    border-radius: 500px;
+    border: 9px double #B29E4D;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+
+}
+
+.number {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #B29E4D;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.number-1 {
+    transform: rotate(30deg);
+}
+
+.number-2 {
+    transform: rotate(60deg);
+}
+
+.number-3 {
+    transform: rotate(90deg);
+}
+
+.number-4 {
+    transform: rotate(120deg);
+}
+
+.number-5 {
+    transform: rotate(150deg);
+}
+
+.number-6 {
+    transform: rotate(180deg);
+}
+
+.number-7 {
+    transform: rotate(210deg);
+}
+
+.number-8 {
+    transform: rotate(240deg);
+}
+
+.number-9 {
+    transform: rotate(270deg);
+}
+
+.number-10 {
+    transform: rotate(300deg);
+}
+
+.number-11 {
+    transform: rotate(330deg);
+}
+
+.number-12 {
+    transform: rotate(360deg);
+}
+
+.marc {
+    font-family: 'Bonheur Royale', cursive;
+    color: #9492907a;
+    position: absolute;
+    top: 75%;
+    font-size: 3rem;
+}
+
+.segundos {
+    width: 2.5px;
+    height: 240px;
+    /* background-color: #8B6538; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+    transition: 3s;
+}
+
+.segundos>img {
+    height: 300px;
+    margin-top: 100px;
+}
+
+.minutos {
+    width: 6px;
+    height: 170px;
+    /* background-color: #8a8886; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.minutos>img {
+    height: 200px;
+    margin-left: 3px;
+}
+
+
+.hora {
+    width: 8px;
+    height: 150px;
+    /* background-color: #8a8886; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.hora>img {
+    height: 175px;
+    margin-top: 7px;
+    margin-left: 4px;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: #8B6538;
+}
+
+/* CONFIGURAÇÃO DO ENIGMA .......................................................*/
+.config {
+    background-color: #88888800;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: 2s all ease;
+    background-image: none;
+    border: 1px solid #b29e4d00;
+}
+
+.config:hover {
+    background-color: #fff;
+    background-image: url(../img/config-clock.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    transition: 2s all ease;
+    background-position: center;
+    border: 1px solid #B29E4D;
+
+}
+
+.dv-config {
+    position: absolute;
+    border-top-right-radius: 50px;
+    background-color: #f1f1f0ea;
+    border: 5px double #B29E4D;
+    width: 50%;
+    height: 70%;
+    z-index: 1;
+    left: 25%;
+    top: 15%;
+}
+
+.block {
+    width: 100%;
+    height: 15%;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: end;
+}
+
+#sair-config {
+    border: solid 2px #B29E4D;
+    width: 100px;
+    height: 50px;
+    border-top-right-radius: 47px;
+    border-bottom-left-radius: 47px;
+    cursor: pointer;
+    margin: 5px 5px 0px 0px;
+    color: #888888;
+    font-weight: 800;
+}
+
+#sair-config:hover,
+.btn-newcode:hover {
+    background-color: #dddddd;
+    transition: 1s all;
+}
+
+/* new code */
+.senhaConfig {
+    position: absolute;
+    border-radius: 15px;
+    background-color: #f1f1f0ea;
+    border: 3px double #B29E4D;
+    min-width: 20%;
+    min-height: 30%;
+    z-index: 1;
+    left: 40%;
+    top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    color: #a89441;
+}
+
+.senhaConfig input {
+    height: 30px;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-left: 2px double #a89441;
+    font-size: 15px;
+}
+
+.senhaConfig button {
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    width: 194px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #fff;
+    background-color: #a89441;
+    cursor: pointer;
+}
+
+.senhaConfig button:hover {
+    background-color: #a89341bd;
+}
+
+#senhaIncorreta {
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(187, 1, 1);
+}
+
+.config-new {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.respCorret {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    font-weight: 800;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+.respCorret input {
+    width: 40%;
+    height: 40px;
+    font-weight: 800;
+    font-family: 'Quicksand', sans-serif;
+    color: #a89441;
+    border: none;
+    border-bottom: solid 2px #888888;
+    background: none;
+    font-size: 30px;
+    margin-left: 10px;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dv-btns-newcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+}
+
+.btn-newcode {
+    width: 55px;
+    height: 55px;
+    border-radius: 55px;
+    background-color: #f1f1f0;
+    border: 1px solid #B29E4D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: #888888;
+    font-weight: 800;
+}
+
+.ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #888888;
+}
+
+.traco {
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #888888;
+}
+
+.dv-newvalor {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #a89441;
+    font-family: 'Quicksand', sans-serif;
+
+}
